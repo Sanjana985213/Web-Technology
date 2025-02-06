@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Store</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Welcome to Our Cloth Store</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">SignUp</a>
+            
+        
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" style="padding: 20px; text-align: center;">
+        <h2>Home</h2>
+        <p>Welcome to our cloth store! We offer a wide range of fashionable and comfortable clothing for men, women, and kids. Explore our collection and find the perfect outfit for any occasion.</p>
+        <img src="https://img.freepik.com/free-psd/express-your-style-post-template-psd-fashion_53876-140389.jpg?t=st=1738478732~exp=1738482332~hmac=511a03244758f95ed3e5b10faf67e55023effd904db312bc928c0de4cf4dbc0a&w=740" alt="Cloth Store" style="width: 100%; max-width: 1100px; height: 500px;">
+    </section>
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <h2>Products</h2>
+        <p>Check out our latest collection of clothes:</p>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-hipster-businessman-model-wearing-casual-clothes_158538-1001.jpg?t=st=1738478977~exp=1738482577~hmac=3e987b7f2a4411ac839403d87fba542a33a93fac764eeb9d478baf1a0f83102e&w=900" alt="Shirt">
+                <h3>Men's Shirt</h3>
+                <p>$29.99</p>
+                <button class="buy-now" onclick="buyNow('Men\'s Shirt')">Buy Now</button>
+                
+            </div>
+            <div class="product">
+                <img src="https://img.freepik.com/free-photo/young-stylish-beautiful-woman-blue-dress-summer-fashion-trend-vacation-garden-tropical-hotel-terrace-smiling_285396-3854.jpg?t=st=1738479129~exp=1738482729~hmac=d71525bce4255ccf4e5baf316e57300f5c6a98a106aefab45b8818b81d0613f4&w=996" alt="Dress">
+                <h3>Women's Dress</h3>
+                <p>$49.99</p>
+                <button class="buy-now" onclick="buyNow('Women\'s Dress')">Buy Now</button>
+                
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/16640332/pexels-photo-16640332/free-photo-of-baby-girl-wearing-a-dress-and-a-crown.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <h3>Kids Clothes</h3>
+                <p>$19.99</p>
+                <button class="buy-now" onclick="buyNow('Kids Clothes')">Buy Now</button>
+                
+            </div>
+            <div class="product">
+                <img src="images/Womens shirt.jpg">
+                <h3>Women's Shirt</h3>
+                <p>$22.23</p>
+                <button class="buy-now" onclick="buyNow('Kids Clothes')">Buy Now</button>
+                 </div>
+                 <div class="product">
+                    <img src="images/Mens.webp">
+                    <h3>Men's Suit</h3>
+                    <p>$22.23</p>
+                    <button class="buy-now" onclick="buyNow('Kids Clothes')">Buy Now</button>
+                     </div>
+                     <div class="product">
+                        <img src="Womens Traditional">
+                        <h3>Womens traditional dress</h3>
+                        <p>$22.23</p>
+                        <button class="buy-now" onclick="buyNow('Kids Clothes')">Buy Now</button>
+                         </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are a family-owned cloth store dedicated to providing high-quality and stylish clothing at affordable prices. Our mission is to make fashion accessible to everyone.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+        <p>Email: info@clothstore.com</p>
+        <p>Phone: +91 8999230914</p>
+        <p>Address: 123 Fashion Street, Dombivali, Mumbai</p>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0;">
+        <p>&copy; 2023 Cloth Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
