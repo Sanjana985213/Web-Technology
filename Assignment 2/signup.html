@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Signup - Fashion Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            background: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #e65c00;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form name="f1" onsubmit="return validateForm()">
+            <input type="text" name="t1" placeholder="Full Name" required>
+            <span class="error" id="name-error"></span>
+            <input type="email" name="t2" placeholder="Email" required>
+            <span class="error" id="email-error"></span>
+            <input type="text" name="t3" placeholder="Contact Number" required>
+            <span class="error" id="contact-error"></span>
+            <input type="password" name="t4" placeholder="Password" required>
+            <span class="error" id="password-error"></span>
+            <input type="password" name="t5" placeholder="Confirm Password" required>
+            <span class="error" id="confirm-password-error"></span>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="success" id="success-message"></div>
+        </form>
+    </div>
+    
+    <script>
+        function validateForm() {
+            let name = document.f1.t1.value;
+            let email = document.f1.t2.value;
+            let contact = document.f1.t3.value;
+            let password = document.f1.t4.value;
+            let confirmPassword = document.f1.t5.value;
+            let nameError = document.getElementById("name-error");
+            let emailError = document.getElementById("email-error");
+            let contactError = document.getElementById("contact-error");
+            let passwordError = document.getElementById("password-error");
+            let confirmPasswordError = document.getElementById("confirm-password-error");
+            let successMessage = document.getElementById("success-message");
+            let isValid = true;
+            
+            if (name.length < 3) {
+                nameError.innerText = "Full Name must be at least 3 characters long";
+                isValid = false;
+            } else {
+                nameError.innerText = "";
+            }
+            
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.innerText = "Enter a valid Email address";
+                isValid = false;
+            } else {
+                emailError.innerText = "";
+            }
+            
+            if (!/^[0-9]{10}$/.test(contact)) {
+                contactError.innerText = "Contact Number must be 10 digits";
+                isValid = false;
+            } else {
+                contactError.innerText = "";
+            }
+            
+            if (password.length < 6) {
+                passwordError.innerText = "Password must be at least 6 characters long";
+                isValid = false;
+            } else {
+                passwordError.innerText = "";
+            }
+            
+            if (password !== confirmPassword) {
+                confirmPasswordError.innerText = "Passwords do not match";
+                isValid = false;
+            } else {
+                confirmPasswordError.innerText = "";
+            }
+            
+            if (isValid) {
+                successMessage.innerText = "Signup successful!";
+                alert("Signup successful!");
+                setTimeout(() => {
+                    successMessage.innerText = "";
+                    document.f1.reset();
+                }, 3000);
+            }
+            
+            return isValid;
+        }
+    </script>
+</body>
+</html>
